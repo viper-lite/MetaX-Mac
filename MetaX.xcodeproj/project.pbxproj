@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134676512C1AD42F00C404DC /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134676502C1AD42F00C404DC /* FinderSync.swift */; };
+		134676562C1AD42F00C404DC /* FinderX.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1346764E2C1AD42F00C404DC /* FinderX.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		13D0208F2C1AC97200F77E92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0208E2C1AC97200F77E92 /* AppDelegate.swift */; };
 		13D020912C1AC97200F77E92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D020902C1AC97200F77E92 /* ViewController.swift */; };
 		13D020932C1AC97400F77E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13D020922C1AC97400F77E92 /* Assets.xcassets */; };
@@ -14,7 +16,35 @@
 		ED47F1662E2D9DC35DA2650B /* Pods_MetaX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB49897D3F002AF08642053 /* Pods_MetaX.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		134676542C1AD42F00C404DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13D020832C1AC97200F77E92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1346764D2C1AD42F00C404DC;
+			remoteInfo = FinderX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		134676572C1AD42F00C404DC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				134676562C1AD42F00C404DC /* FinderX.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1346764E2C1AD42F00C404DC /* FinderX.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinderX.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		134676502C1AD42F00C404DC /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		134676522C1AD42F00C404DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		134676532C1AD42F00C404DC /* FinderX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinderX.entitlements; sourceTree = "<group>"; };
 		13D0208B2C1AC97200F77E92 /* MetaX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13D0208E2C1AC97200F77E92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13D020902C1AC97200F77E92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +57,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1346764B2C1AD42F00C404DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13D020882C1AC97200F77E92 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +75,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1346764F2C1AD42F00C404DC /* FinderX */ = {
+			isa = PBXGroup;
+			children = (
+				134676502C1AD42F00C404DC /* FinderSync.swift */,
+				134676522C1AD42F00C404DC /* Info.plist */,
+				134676532C1AD42F00C404DC /* FinderX.entitlements */,
+			);
+			path = FinderX;
+			sourceTree = "<group>";
+		};
 		13D020822C1AC97200F77E92 = {
 			isa = PBXGroup;
 			children = (
 				13D0208D2C1AC97200F77E92 /* MetaX */,
+				1346764F2C1AD42F00C404DC /* FinderX */,
 				13D0208C2C1AC97200F77E92 /* Products */,
 				B5237B4C5158EBAD9C35287A /* Pods */,
 				7393FC46550132B104BF70A3 /* Frameworks */,
@@ -52,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				13D0208B2C1AC97200F77E92 /* MetaX.app */,
+				1346764E2C1AD42F00C404DC /* FinderX.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,13 +131,29 @@
 				1E8394E7097FE4C096E52A47 /* Pods-MetaX.debug.xcconfig */,
 				9F75DD6040BBD00BC7B54B27 /* Pods-MetaX.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1346764D2C1AD42F00C404DC /* FinderX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1346765A2C1AD42F00C404DC /* Build configuration list for PBXNativeTarget "FinderX" */;
+			buildPhases = (
+				1346764A2C1AD42F00C404DC /* Sources */,
+				1346764B2C1AD42F00C404DC /* Frameworks */,
+				1346764C2C1AD42F00C404DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinderX;
+			productName = FinderX;
+			productReference = 1346764E2C1AD42F00C404DC /* FinderX.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		13D0208A2C1AC97200F77E92 /* MetaX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13D0209A2C1AC97400F77E92 /* Build configuration list for PBXNativeTarget "MetaX" */;
@@ -97,10 +162,12 @@
 				13D020872C1AC97200F77E92 /* Sources */,
 				13D020882C1AC97200F77E92 /* Frameworks */,
 				13D020892C1AC97200F77E92 /* Resources */,
+				134676572C1AD42F00C404DC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				134676552C1AD42F00C404DC /* PBXTargetDependency */,
 			);
 			name = MetaX;
 			productName = MetaX;
@@ -117,6 +184,9 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					1346764D2C1AD42F00C404DC = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					13D0208A2C1AC97200F77E92 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -136,11 +206,19 @@
 			projectRoot = "";
 			targets = (
 				13D0208A2C1AC97200F77E92 /* MetaX */,
+				1346764D2C1AD42F00C404DC /* FinderX */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1346764C2C1AD42F00C404DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13D020892C1AC97200F77E92 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +256,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1346764A2C1AD42F00C404DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				134676512C1AD42F00C404DC /* FinderSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13D020872C1AC97200F77E92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +274,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		134676552C1AD42F00C404DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1346764D2C1AD42F00C404DC /* FinderX */;
+			targetProxy = 134676542C1AD42F00C404DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		13D020942C1AC97400F77E92 /* Main.storyboard */ = {
@@ -201,6 +295,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		134676582C1AD42F00C404DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FinderX/FinderX.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5MF9QXWB46;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinderX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FinderX;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.viper.macosx.MetaX.FinderX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		134676592C1AD42F00C404DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FinderX/FinderX.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5MF9QXWB46;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinderX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FinderX;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.viper.macosx.MetaX.FinderX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		13D020982C1AC97400F77E92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -323,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E8394E7097FE4C096E52A47 /* Pods-MetaX.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MetaX/MetaX.entitlements;
@@ -351,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F75DD6040BBD00BC7B54B27 /* Pods-MetaX.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MetaX/MetaX.entitlements;
@@ -378,6 +528,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1346765A2C1AD42F00C404DC /* Build configuration list for PBXNativeTarget "FinderX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				134676582C1AD42F00C404DC /* Debug */,
+				134676592C1AD42F00C404DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		13D020862C1AC97200F77E92 /* Build configuration list for PBXProject "MetaX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

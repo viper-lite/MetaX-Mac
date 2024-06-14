@@ -65,7 +65,17 @@ class FinderSync: FIFinderSync {
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
         // Produce a menu for the extension.
         let menu = NSMenu(title: "")
-        menu.addItem(withTitle: "Example Menu Item", action: #selector(sampleAction(_:)), keyEquivalent: "")
+        
+        if menuKind == FIMenuKind.contextualMenuForContainer {
+            menu.addItem(withTitle: "Finder空白处右键", action: #selector(sampleAction(_:)), keyEquivalent: "")
+        } else if menuKind == FIMenuKind.contextualMenuForItems {
+            menu.addItem(withTitle: "Finder文件上右键", action: #selector(sampleAction(_:)), keyEquivalent: "")
+        } else if menuKind == FIMenuKind.contextualMenuForSidebar {
+            menu.addItem(withTitle: "Finder侧边栏右键", action: #selector(sampleAction(_:)), keyEquivalent: "")
+        } else if menuKind == FIMenuKind.toolbarItemMenu {
+            menu.addItem(withTitle: "Finder顶栏", action: #selector(sampleAction(_:)), keyEquivalent: "")
+        }
+        
         return menu
     }
     

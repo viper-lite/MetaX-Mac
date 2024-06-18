@@ -9,16 +9,15 @@ import Cocoa
 import FinderSync
 
 class FinderSync: FIFinderSync {
-
-    var myFolderURL = URL(fileURLWithPath: "/")
     
     override init() {
         super.init()
         
 //        NSLog("FinderSync() launched from %@", Bundle.main.bundlePath as NSString)
         
+        let mountedVolumes = FileManager.default.mountedVolumeURLs(includingResourceValuesForKeys: nil, options: [])
         // Set up the directory we are syncing.
-        FIFinderSyncController.default().directoryURLs = [self.myFolderURL]
+        FIFinderSyncController.default().directoryURLs = Set(mountedVolumes ?? [])
         
         // Set up images for our badge identifiers. For demonstration purposes, this uses off-the-shelf images.
 //        FIFinderSyncController.default().setBadgeImage(NSImage(named: NSImage.colorPanelName)!, label: "Status One" , forBadgeIdentifier: "One")
